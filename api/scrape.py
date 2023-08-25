@@ -57,7 +57,6 @@ def create_df():
             'volume': data['volume'],
             'market_cap': data['market_cap']
         })
-    # Create a data frame from the collected data
     df = pd.DataFrame(stock_data)
     return df
 
@@ -106,20 +105,3 @@ def get_volume(ticker_name):
 
 def get_market_cap(ticker_name):
     return ticker_name['market_cap']
-
-
-# def target_price_notifier(ticker, target_price):
-#     frequency = 5
-#     start_time = time.time()
-#     time_limit = 86400
-#     while True:
-#         df = create_df()
-#         df['value'] = pd.to_numeric(df['value'].str.replace(',', ''), downcast='integer')
-#         if df[df['ticker'] == ticker]['value'].values[0] >= target_price:
-#             return df[df['ticker'] == ticker][['timestamp', 'ticker', 'value']]
-#         if time.time() - start_time > time_limit:
-#             break
-#         time.sleep(frequency)
-
-if __name__ == "__main__":
-    print(create_df())
