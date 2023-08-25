@@ -1,0 +1,12 @@
+/venv/
+/db/__pycache__/
+/api/__pycache__/
+/stock_data.db
+/test.py
+
+
+/.idea/shelf/
+/.idea/workspace.xml
+/.idea/httpRequests/
+/.idea/dataSources/
+/.idea/dataSources.local.xml
